@@ -1,0 +1,5 @@
+SELECT * FROM retention.v_customers_features;
+SELECT * FROM retention.v_churn_summary;
+SELECT * FROM retention.v_tenure_trend_monthly;
+SELECT * FROM retention.v_decile_churn;
+SELECT * FROM retention.v_at_risk_calllist;
