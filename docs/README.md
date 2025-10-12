@@ -64,7 +64,7 @@ Analyzes behavioral and service-related factors driving churn.
 ## 📸 Dashboard Preview
 
 ### 1️⃣ Customer Retention Overview
-![Customer Retention Overview](docs/visuals/Customer Retention.png)
+![Customer Retention Overview](docs/visuals/Customer Retention Overview.png)
 
 ### 2️⃣ Customer Risk Overview
 ![Customer Risk Overview](docs/visuals/Customer Risk Overview.png)
