@@ -1,3 +1,6 @@
+![Dashboard Cover](docs/visuals/Risk Drivers & Interventions.png)
+
+
 # 📊 Customer Retention & Risk Analysis Dashboard
 
 This project analyzes customer churn and retention patterns using **SQL + Power BI**.  
