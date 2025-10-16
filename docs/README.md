@@ -86,20 +86,8 @@ drivers_interventions.png
 
 retention_dashboard_demo.mp4 (~15 s scrolling video recommended)
 
-💬 Summary
-
-This project demonstrates a full analytics pipeline:
-
-SQL modeling in PostgreSQL
-
-Business-oriented exploration in Metabase
-
-Final storytelling dashboard in Power BI
-
-It combines strong data modeling, modern BI integration, and communication of actionable insights — exactly what employers look for in data analysts.
-
 ## 👤 Author
 **Francesco Marchì**  
 📍 Ho Chi Minh City, Vietnam  
 📧 [marchi.frncsc@gmail.com]  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/francesco-march%C3%AC-115657205/)  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/francesco-march%C3%AC-115657205/)
