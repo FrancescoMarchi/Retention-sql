@@ -1,82 +1,102 @@
 ![Dashboard Cover](docs/visuals/Risk Drivers & Interventions.png)
 
 
-# 📊 Customer Retention & Risk Analysis Dashboard
+📊 Customer Retention Analysis – SQL → Metabase → Power BI Pipeline
 
-This project analyzes customer churn and retention patterns using **SQL + Power BI**.  
-It identifies *why customers leave*, *which segments are most at risk*, and *how to intervene effectively*.
+Objective:
+Analyze churn behavior and retention drivers for a telecommunications company using SQL, Metabase, and Power BI — building a full modern analytics workflow from data extraction to executive visualization.
 
----
+⚙️ Workflow Overview
+Stage	Tool	Description
+🧩 Data Modeling	PostgreSQL	SQL views created to clean, join, and aggregate customer data into analytical tables (v_customers_features, v_churn_summary, etc.)
+🔍 Exploration	Metabase	Interactive visual exploration of churn by tenure, contract, tech support, gender, senior citizen, and partner — using dynamic filters connected to SQL queries
+📈 Visualization	Power BI	Final executive dashboards with KPIs, combo charts, and slicers, following best-practice star schema modeling
+🧠 What We Found
 
-## 🔍 Project Overview
-Customer churn represents a major loss for subscription-based businesses.  
-Using a relational model of customer data and at-risk call lists, this dashboard tracks retention over time, segments customers by tenure and risk level, and pinpoints actionable drivers of churn.
+1️⃣ Churn is heavily front-loaded.
+Over 50 % of churn occurs in the first six months of tenure — customer onboarding and early experience are critical retention windows.
 
-The result is a **three-page executive dashboard** built in Power BI, combining SQL-extracted features with business-focused analytics.
+2️⃣ Contract type is the strongest churn predictor.
+Month-to-month customers churn 4× more than those on two-year contracts.
 
----
+3️⃣ Lack of tech support doubles churn risk.
+Customers without tech support have a 45 % high-risk rate vs 18 % for supported customers.
 
-## 📈 Dashboard Pages
+4️⃣ Senior and partner demographics show no major difference,
+but their inclusion improved segmentation flexibility for dashboard filters.
 
-### **1️⃣ Customer Retention Overview**
-Shows overall churn dynamics and customer retention by tenure group.  
-> 💡 *Insight:* Most churn occurs within the first 12 months — early engagement is key.
-
----
-
-### **2️⃣ Customer Risk Overview**
-Segments customers into risk buckets (Low, Medium, High) based on their risk score.  
-> 💡 *Insight:* High-risk customers (8%) churn 8× faster than low-risk ones, indicating clear focus areas for retention campaigns.
-
----
-
-### **3️⃣ Risk Drivers & Interventions**
-Analyzes behavioral and service-related factors driving churn.  
-> 💡 *Insights:*
-> - Customers **without Tech Support** are 2.5× more likely to churn (45% vs 18%).  
-> - **Month-to-month contracts** have 4× higher churn than long-term plans.  
-> 🎯 *Action:* Prioritize retention efforts on month-to-month customers lacking tech support.
-
----
-
-## ⚙️ Tools & Skills
-- **SQL:** Data extraction, churn aggregation, segmentation queries  
-- **Power BI:** Data modeling, DAX measures, and storytelling visualization  
-- **Data Analysis:** Feature correlation, risk scoring, customer segmentation  
-- **Business Intelligence:** Translating data into actionable business decisions
-
----
-
-## 🧠 Key Outcomes
-- Reduced analysis from raw data to clear retention levers  
-- Built a BI dashboard with **three structured analytical layers**  
-- Delivered actionable insights aligned with real-world telco business use cases  
-
----
-
-## 📂 Files
-| Folder | Description |
-|---------|--------------|
-| `data/` | Source CSVs and feature tables |
-| `sql/` | SQL queries for data modeling and churn metrics |
-| `powerbi/` | `.pbix` file and Power BI report images |
-| `docs/` | Summary PDF and screenshots for quick reference |
-
----
-
-## 📸 Dashboard Preview
-
-### 1️⃣ Customer Retention Overview
-![Customer Retention Overview](docs/visuals/Customer Retention Overview.png)
-
-### 2️⃣ Customer Risk Overview
-![Customer Risk Overview](docs/visuals/Customer Risk Overview.png)
-
-### 3️⃣ Risk Drivers & Interventions
-![Risk Drivers & Interventions](docs/visuals/Risk Drivers & Interventions.png)
+🧮 Metrics & Measures (Power BI)
+KPI	Formula (DAX)	Description
+Total Customers	COUNTROWS(customers_features)	Total active customers
+Churners	CALCULATE([Total Customers], customers_features[churn_flag] = TRUE())	Count of churned customers
+Churn Rate %	DIVIDE([Churners], [Total Customers])	Share of churned customers
+Retained	[Total Customers] - [Churners]	Still-active customers
+High-Risk %	DIVIDE(CALCULATE([Total Customers], customers_features[risk_bucket]="High (5–6)"), [Total Customers])	Share of customers in top risk band
+🧱 Data Model (Star Schema)
+DimSenior      → customers_features ← DimPartner
+                                 ↑
+                              (fact)
 
 
----
+DimSenior / DimPartner: Boolean “Yes/No” dimension tables mapped to boolean fields in customers_features
+
+customers_features: Fact table containing customer IDs, churn flags, risk scores, service features, and demographic attributes
+
+Relationships: Many-to-One, Single direction, no ambiguity
+
+🧭 Key Visuals (Power BI)
+
+(Insert screenshots here — three from your dashboard)
+
+Customer Retention Overview: Combo chart of churn rate vs customer count by tenure group
+
+Customer Risk Overview: Donut + combo chart of risk bucket distribution and churn intensity
+
+Risk Drivers & Interventions: Tech support and contract type breakdowns with interactive slicers for senior, partner, and gender
+
+🧰 Technical Highlights
+
+Metabase SQL filters: Implemented field-linked text + boolean filters ([[AND gender={{gender}}]], etc.)
+
+Boolean conversion: Added Power Query columns (SeniorBool, PartnerBool) to replace 0/1 flags with logical types
+
+Dynamic relationships: Built clean dimension tables (DimSenior, DimPartner) using DATATABLE()
+
+Cross-tool consistency: Verified same insights in Metabase and Power BI
+
+🚀 Recommendations
+
+Introduce loyalty incentives after 6 months to counter early churn.
+
+Encourage contract upgrades via retention campaigns.
+
+Prioritize proactive outreach to customers without tech support.
+
+🖼️ Demo Material
+
+📸 /assets/screenshots/
+
+retention_overview.png
+
+risk_overview.png
+
+drivers_interventions.png
+
+🎥 /assets/demo/
+
+retention_dashboard_demo.mp4 (~15 s scrolling video recommended)
+
+💬 Summary
+
+This project demonstrates a full analytics pipeline:
+
+SQL modeling in PostgreSQL
+
+Business-oriented exploration in Metabase
+
+Final storytelling dashboard in Power BI
+
+It combines strong data modeling, modern BI integration, and communication of actionable insights — exactly what employers look for in data analysts.
 
 ## 👤 Author
 **Francesco Marchì**  
