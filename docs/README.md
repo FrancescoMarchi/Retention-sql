@@ -224,21 +224,14 @@ DimSenior      → customers_features ← DimPartner
 
 ---
 
-## 📸 Docs & Visuals  
+## 📸 Docs & Visuals
 
-Located in `/docs/visuals/`
+Located in: `/docs/visuals/`
 
-| File | Description |
-
-|------|--------------|
-
-| `retention_overview.png` | Power BI Customer Retention Overview |
-
-| `risk_overview.png` | Risk segmentation dashboard |
-
-| `drivers_interventions.png` | Risk driver visuals |
-
-| *(optional)* `demo.mp4` | 20s walkthrough clip for GitHub |
+- **🧭 Customer_Retention_Overview.png** — Power BI *Customer Retention Overview*
+- **📊 Customer_Risk_Overview.png** — Risk segmentation dashboard
+- **⚙️ Risk_Drivers_&_Interventions.png** — Risk driver visuals
+- **🎞️ walkthrough.gif** — 20-second dashboard walkthrough animation
 
 ---
 
