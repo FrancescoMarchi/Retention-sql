@@ -214,21 +214,13 @@ DimSenior      → customers_features ← DimPartner
 
 ---
 
-## 🧰 Tools & Technologies  
+## 🧰 Tools & Technologies
 
-| Category | Tools |
-
-|-----------|--------|
-
-| Database | PostgreSQL |
-
-| BI Tools | Power BI, Metabase |
-
-| Languages | SQL, DAX |
-
-| Modeling | Star Schema (Dim–Fact) |
-
-| Data Types | Boolean, Categorical, Numeric |
+**Database:** PostgreSQL  
+**BI Tools:** Power BI, Metabase  
+**Languages:** SQL, DAX  
+**Modeling:** Star Schema (Dim–Fact)  
+**Data Types:** Boolean, Categorical, Numeric
 
 ---
 
