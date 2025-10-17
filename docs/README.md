@@ -114,21 +114,48 @@ even if their standalone impact is moderate.
 
 ---
 
-## 🧮 Power BI Measures  
+## 🧮 Power BI Measures
 
-| KPI | Formula | Description |
+Below are the main DAX measures used to calculate churn and retention KPIs:
 
-|------|----------|-------------|
+---
 
-| **Total Customers** | `COUNTROWS(customers_features)` | Total active customers |
+### 🧍‍♂️Total Customers  
+```DAX
+Total Customers = COUNTROWS(customers_features)
 
-| **Churners** | `CALCULATE([Total Customers], customers_features[churn_flag] = TRUE())` | Customers who churned |
+**Description:** Total number of active customers in the dataset.
 
-| **Churn Rate %** | `DIVIDE([Churners], [Total Customers])` | Churn share |
+###💔 Churners
+```DAX
+Churners = CALCULATE([Total Customers], customers_features[churn_flag] = TRUE())
 
-| **Retained** | `[Total Customers] - [Churners]` | Active customers |
+**Description:** Customers who have churned.
 
-| **High-Risk %** | `DIVIDE(CALCULATE([Total Customers], customers_features[risk_bucket]="High (5–6)"), [Total Customers])` | High-risk customers share |
+###📉Churn Rate %
+```DAX
+Churn Rate % = DIVIDE([Churners], [Total Customers])
+
+**Description:** Percentage of total customers who churned.
+
+###🔁 Retained
+```DAX
+Retained = [Total Customers] - [Churners]
+
+**Description:** Customers still active (non-churned).
+
+###⚠️ High-Risk %
+```DAX
+High-Risk % =
+DIVIDE(
+    CALCULATE(
+        [Total Customers],
+        customers_features[risk_bucket] = "High (5-6)"
+    ),
+    [Total Customers]
+)
+
+**Description**: Share of customers in the high-risk group.
 
 ---
 
