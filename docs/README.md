@@ -148,7 +148,7 @@ Retained = [Total Customers] - [Churners]
 
 **Description:** Customers still active (non-churned).
 
-###⚠️ High-Risk %
+### ⚠️ High-Risk %
 ```DAX
 High-Risk % =
 DIVIDE(
