@@ -2,17 +2,17 @@
 
 \# 📊 Customer Retention SQL Project  
 
-\*\*Full Analytics Workflow: SQL → Metabase → Power BI\*\*
+**Full Analytics Workflow: SQL → Metabase → Power BI**
 
 ---
 
-\## 🎯 Objective  
+## 🎯 Objective  
 
-Analyze customer churn and retention drivers for a telecommunications company using a full modern analytics stack — \*\*PostgreSQL\*\*, \*\*Metabase\*\*, and \*\*Power BI\*\* — moving from raw data to executive insights.
+Analyze customer churn and retention drivers for a telecommunications company using a full modern analytics stack — **PostgreSQL**, **Metabase**, and **Power BI** — moving from raw data to executive insights.
 
 ---
 
-\## 📁 Project Structure  
+## 📁 Project Structure  
 
 ```
 
@@ -42,13 +42,13 @@ Retention-sql/
 
 ---
 
-\## ⚙️ Workflow Overview  
+## ⚙️ Workflow Overview  
 
 | Stage | Tool | Description |
 
 |--------|------|-------------|
 
-| 🧩 Data Modeling | \*\*PostgreSQL\*\* | Created analytical SQL views (`v\_customers\_features`, `v\_churn\_summary`, etc.) to aggregate and clean data |
+| 🧩 Data Modeling | **PostgreSQL** | Created analytical SQL views (`v\_customers\_features`, `v\_churn\_summary`, etc.) to aggregate and clean data |
 
 | 🔍 Exploration | \*\*Metabase\*\* | Interactive exploration with SQL-based charts and global filters (gender, partner, senior citizen) |
 
