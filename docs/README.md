@@ -80,7 +80,7 @@ even if their standalone impact is moderate.
 
 \### 1️⃣ Customer Retention Overview  
 
-![Customer Retention Overview](docs/visuals/Customer%20Retention%20Overview.png)
+![Customer Retention Overview](visuals/Customer%20Retention%20Overview.png)
 
 \- KPIs: Total Customers, Churners, Churn Rate %, Retained  
 
@@ -90,7 +90,7 @@ even if their standalone impact is moderate.
 
 \### 2️⃣ Customer Risk Overview  
 
-![Customer Risk Overview](docs/visuals/Customer%20Risk%20Overview.png)
+![Customer Risk Overview](visuals/Customer%20Risk%20Overview.png)
 
 \- Donut chart: Risk bucket distribution  
 
@@ -100,7 +100,7 @@ even if their standalone impact is moderate.
 
 \### 3️⃣ Risk Drivers \& Interventions  
 
-![Customer Risk Overview](docs/visuals/Customer%20Risk%20Overview.png)
+![Customer Risk Overview](visuals/Customer%20Risk%20Overview.png)
 
 \- Slicers: \*\*Senior Citizen\*\*, \*\*Partner\*\*, \*\*Gender\*\*  
 
@@ -239,7 +239,6 @@ It integrates technical execution with strategic interpretation — turning raw 
 ---
 
 &nbsp;
-
 💼 \*\*Stack:\*\* PostgreSQL | Metabase | Power BI | DAX | SQL  
 
 🕓 \*\*Completed:\*\* October 2025  
