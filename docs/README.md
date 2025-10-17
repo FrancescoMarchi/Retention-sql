@@ -127,21 +127,21 @@ Total Customers = COUNTROWS(customers_features)
 
 **Description:** Total number of active customers in the dataset.
 
-###💔 Churners
+### 💔 Churners
 ```DAX
 Churners = CALCULATE([Total Customers], customers_features[churn_flag] = TRUE())
 ```
 
 **Description:** Customers who have churned.
 
-###📉Churn Rate %
+### 📉 Churn Rate %
 ```DAX
 Churn Rate % = DIVIDE([Churners], [Total Customers])
 ```
 
 **Description:** Percentage of total customers who churned.
 
-###🔁 Retained
+### 🔁 Retained
 ```DAX
 Retained = [Total Customers] - [Churners]
 ```
@@ -160,7 +160,7 @@ DIVIDE(
 )
 ```
 
-**Description**: Share of customers in the high-risk group.
+**Description:** Share of customers in the high-risk group.
 
 ---
 
