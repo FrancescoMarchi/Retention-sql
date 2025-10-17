@@ -1,4 +1,4 @@
-!\[Dashboard Cover](docs/visuals/walkthrough.gif)
+!\[Dashboard Cover](visuals/walkthrough.gif)
 
 \# 📊 Customer Retention SQL Project  
 
