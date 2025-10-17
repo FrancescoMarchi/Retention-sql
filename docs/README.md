@@ -100,7 +100,7 @@ even if their standalone impact is moderate.
 
 ### 3️⃣ Risk Drivers & Interventions  
 
-![Customer Risk Overview](visuals/Risk%20Drivers%20&%20Interventions)
+![Customer Risk Overview](visuals/Risk%20Drivers%20&%20Interventions.png)
 
 - Slicers: **Senior Citizen**, **Partner**, **Gender**  
 
