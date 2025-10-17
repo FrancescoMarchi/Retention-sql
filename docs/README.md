@@ -231,7 +231,7 @@ Located in: `/docs/visuals/`
 - **🧭 Customer_Retention_Overview.png** — Power BI *Customer Retention Overview*
 - **📊 Customer_Risk_Overview.png** — Risk segmentation dashboard
 - **⚙️ Risk_Drivers_&_Interventions.png** — Risk driver visuals
-- **🎞️ walkthrough.gif** — 20-second dashboard walkthrough animation
+- **🎞️ walkthrough.gif** — short dashboard walkthrough animation
 
 ---
 
