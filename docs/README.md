@@ -238,7 +238,6 @@ It integrates technical execution with strategic interpretation — turning raw 
 
 ---
 
-&nbsp;
 💼 **Stack:** PostgreSQL | Metabase | Power BI | DAX | SQL  
 
 🕓 **Completed:** October 2025  
