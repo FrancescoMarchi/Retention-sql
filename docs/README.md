@@ -1,6 +1,6 @@
 ![Dashboard Cover](visuals/walkthrough.gif)
 
-\# 📊 Customer Retention SQL Project  
+# 📊 Customer Retention SQL Project  
 
 **Full Analytics Workflow: SQL → Metabase → Power BI**
 
@@ -48,95 +48,95 @@ Retention-sql/
 
 |--------|------|-------------|
 
-| 🧩 Data Modeling | **PostgreSQL** | Created analytical SQL views (`v\_customers\_features`, `v\_churn\_summary`, etc.) to aggregate and clean data |
+| 🧩 Data Modeling | **PostgreSQL** | Created analytical SQL views (`v_customers_features`, `v_churn_summary`, etc.) to aggregate and clean data |
 
-| 🔍 Exploration | \*\*Metabase\*\* | Interactive exploration with SQL-based charts and global filters (gender, partner, senior citizen) |
+| 🔍 Exploration | **Metabase** | Interactive exploration with SQL-based charts and global filters (gender, partner, senior citizen) |
 
-| 📈 Visualization | \*\*Power BI\*\* | Final executive dashboard with KPIs, slicers, combo charts, and star-schema modeling |
+| 📈 Visualization | **Power BI** | Final executive dashboard with KPIs, slicers, combo charts, and star-schema modeling |
 
 ---
 
-\## 🧠 Key Findings  
+## 🧠 Key Findings  
 
-\*\*1️⃣ Early-tenure churn dominates:\*\*  
+**1️⃣ Early-tenure churn dominates:**  
 
-Over \*\*50 % of churn occurs within the first six months\*\* — customer onboarding is the critical retention window.  
+Over **50 % of churn occurs within the first six months** — customer onboarding is the critical retention window.  
 
-\*\*2️⃣ Contract type is the main driver:\*\*  
+**2️⃣ Contract type is the main driver:**  
 
-Month-to-month customers churn \*\*4× more\*\* than two-year contract customers.  
+Month-to-month customers churn **4× more** than two-year contract customers.  
 
-\*\*3️⃣ Tech support matters:\*\*  
+**3️⃣ Tech support matters:**  
 
-Lack of tech support doubles churn risk (\*\*45 %\*\* vs \*\*18 %\*\*).  
+Lack of tech support doubles churn risk (**45 %** vs **18 %**).  
 
-\*\*4️⃣ Senior and partner filters enable better segmentation,\*\*  
+**4️⃣ Senior and partner filters enable better segmentation,**  
 
 even if their standalone impact is moderate.
 
 ---
 
-\## 📈 Power BI Dashboard Overview  
+## 📈 Power BI Dashboard Overview  
 
-\### 1️⃣ Customer Retention Overview  
+### 1️⃣ Customer Retention Overview  
 
 ![Customer Retention Overview](visuals/Customer%20Retention%20Overview.png)
 
-\- KPIs: Total Customers, Churners, Churn Rate %, Retained  
+- KPIs: Total Customers, Churners, Churn Rate %, Retained  
 
-\- Combo chart: Churn % vs Customer volume by tenure bucket  
+- Combo chart: Churn % vs Customer volume by tenure bucket  
 
-&nbsp; → \*Insight:\* Early churn is the main challenge  
+&nbsp; → *Insight:* Early churn is the main challenge  
 
-\### 2️⃣ Customer Risk Overview  
-
-![Customer Risk Overview](visuals/Customer%20Risk%20Overview.png)
-
-\- Donut chart: Risk bucket distribution  
-
-\- Combo chart: Churn % vs Risk level  
-
-&nbsp; → \*Insight:\* High-risk customers churn ≈ 71 %, 8× higher than low risk  
-
-\### 3️⃣ Risk Drivers \& Interventions  
+### 2️⃣ Customer Risk Overview  
 
 ![Customer Risk Overview](visuals/Customer%20Risk%20Overview.png)
 
-\- Slicers: \*\*Senior Citizen\*\*, \*\*Partner\*\*, \*\*Gender\*\*  
+- Donut chart: Risk bucket distribution  
 
-\- Charts:  
+- Combo chart: Churn % vs Risk level  
+
+&nbsp; → *Insight:* High-risk customers churn ≈ 71 %, 8× higher than low risk  
+
+### 3️⃣ Risk Drivers & Interventions  
+
+![Customer Risk Overview](visuals/Customer%20Risk%20Overview.png)
+
+- Slicers: **Senior Citizen**, **Partner**, **Gender**  
+
+- Charts:  
 
 &nbsp; - Tech Support vs Churn %  
 
 &nbsp; - Contract Type vs Churn %  
 
-&nbsp; → \*Insight:\* Month-to-month + no tech support = highest churn likelihood  
+&nbsp; → *Insight:* Month-to-month + no tech support = highest churn likelihood  
 
 ---
 
-\## 🧮 Power BI Measures  
+## 🧮 Power BI Measures  
 
 | KPI | Formula | Description |
 
 |------|----------|-------------|
 
-| \*\*Total Customers\*\* | `COUNTROWS(customers\_features)` | Total active customers |
+| **Total Customers** | `COUNTROWS(customers_features)` | Total active customers |
 
-| \*\*Churners\*\* | `CALCULATE(\[Total Customers], customers\_features\[churn\_flag] = TRUE())` | Customers who churned |
+| **Churners** | `CALCULATE([Total Customers], customers_features[churn_flag] = TRUE())` | Customers who churned |
 
-| \*\*Churn Rate %\*\* | `DIVIDE(\[Churners], \[Total Customers])` | Churn share |
+| **Churn Rate %** | `DIVIDE([Churners], [Total Customers])` | Churn share |
 
-| \*\*Retained\*\* | `\[Total Customers] - \[Churners]` | Active customers |
+| **Retained** | `[Total Customers] - [Churners]` | Active customers |
 
-| \*\*High-Risk %\*\* | `DIVIDE(CALCULATE(\[Total Customers], customers\_features\[risk\_bucket]="High (5–6)"), \[Total Customers])` | High-risk customers share |
+| **High-Risk %** | `DIVIDE(CALCULATE([Total Customers], customers_features[risk_bucket]="High (5–6)"), [Total Customers])` | High-risk customers share |
 
 ---
 
-\## 🧱 Data Model (Star Schema)  
+## 🧱 Data Model (Star Schema)  
 
 ```
 
-DimSenior      → customers\_features ← DimPartner
+DimSenior      → customers_features ← DimPartner
 
 &nbsp;                                ↑
 
@@ -144,31 +144,31 @@ DimSenior      → customers\_features ← DimPartner
 
 ```
 
-\- \*\*DimSenior / DimPartner:\*\* Created with `DATATABLE()` for clean Yes/No filtering  
+- **DimSenior / DimPartner:** Created with `DATATABLE()` for clean Yes/No filtering  
 
-\- \*\*customers\_features:\*\* Fact table with churn flag, service, and demographic data  
+- **customers_features:** Fact table with churn flag, service, and demographic data  
 
-\- Relationships: \*\*Many-to-One\*\*, \*\*Single Direction\*\*, no ambiguity  
-
----
-
-\## 💡 Technical Notes 
-
-\- Converted 0/1 columns to \*\*Boolean\*\* in Power Query (`TRUE/FALSE`)  
-
-\- Built dimension tables for `DimSenior` and `DimPartner`  
-
-\- Fixed relationship ambiguity by enforcing \*\*single active filter paths\*\*  
-
-\- Validated all visuals across Metabase and Power BI for consistency  
+- Relationships: **Many-to-One**, **Single Direction**, no ambiguity  
 
 ---
 
-\## 🧩 Metabase Highlights  
+## 💡 Technical Notes 
 
-\- Connected to PostgreSQL schema `retention`  
+- Converted 0/1 columns to **Boolean** in Power Query (`TRUE/FALSE`)  
 
-\- Built \*\*exploratory SQL questions\*\*:
+- Built dimension tables for `DimSenior` and `DimPartner`  
+
+- Fixed relationship ambiguity by enforcing **single active filter paths**  
+
+- Validated all visuals across Metabase and Power BI for consistency  
+
+---
+
+## 🧩 Metabase Highlights  
+
+- Connected to PostgreSQL schema `retention`  
+
+- Built **exploratory SQL questions**:
 
 &nbsp; - `Churn by Contract Type`
 
@@ -176,13 +176,13 @@ DimSenior      → customers\_features ← DimPartner
 
 &nbsp; - `Churn Rate by Tenure Bucket`  
 
-\- Implemented \*\*global filters\*\* (gender, senior citizen, partner) using \*\*Field Filter\*\* type  
+- Implemented **global filters** (gender, senior citizen, partner) using **Field Filter** type  
 
-\- Linked variables across all visual cards  
+- Linked variables across all visual cards  
 
 ---
 
-\## 🧰 Tools \& Technologies  
+## 🧰 Tools & Technologies  
 
 | Category | Tools |
 
@@ -200,7 +200,7 @@ DimSenior      → customers\_features ← DimPartner
 
 ---
 
-\## 📸 Docs \& Visuals  
+## 📸 Docs & Visuals  
 
 Located in `/docs/visuals/`
 
@@ -208,46 +208,46 @@ Located in `/docs/visuals/`
 
 |------|--------------|
 
-| `retention\_overview.png` | Power BI Customer Retention Overview |
+| `retention_overview.png` | Power BI Customer Retention Overview |
 
-| `risk\_overview.png` | Risk segmentation dashboard |
+| `risk_overview.png` | Risk segmentation dashboard |
 
-| `drivers\_interventions.png` | Risk driver visuals |
+| `drivers_interventions.png` | Risk driver visuals |
 
-| \*(optional)\* `demo.mp4` | 20s walkthrough clip for GitHub |
-
----
-
-\## 🚀 Recommendations  
-
-1\. \*\*Strengthen early engagement\*\* (first 6 months).  
-
-2\. \*\*Encourage long-term contracts\*\* for better retention.  
-
-3\. \*\*Prioritize tech support\*\* for high-risk and new customers.  
+| *(optional)* `demo.mp4` | 20s walkthrough clip for GitHub |
 
 ---
 
-\## 💬 Summary  
+## 🚀 Recommendations  
 
-This project demonstrates a complete \*\*data-to-insight pipeline\*\*:  
+1. **Strengthen early engagement** (first 6 months).  
+
+2. **Encourage long-term contracts** for better retention.  
+
+3. **Prioritize tech support** for high-risk and new customers.  
+
+---
+
+## 💬 Summary  
+
+This project demonstrates a complete **data-to-insight pipeline**:  
 
 > SQL data modeling → Metabase exploration → Power BI storytelling  
 
-It integrates technical execution with strategic interpretation — turning raw churn data into \*\*actionable retention recommendations\*\*.
+It integrates technical execution with strategic interpretation — turning raw churn data into **actionable retention recommendations**.
 
 ---
 
 &nbsp;
-💼 \*\*Stack:\*\* PostgreSQL | Metabase | Power BI | DAX | SQL  
+💼 **Stack:** PostgreSQL | Metabase | Power BI | DAX | SQL  
 
-🕓 \*\*Completed:\*\* October 2025  
+🕓 **Completed:** October 2025  
 
-📂 \*\*Repository:\*\* `Retention-sql`
+📂 **Repository:** `Retention-sql`
 
 👤Author
 
 **Francesco Marchì**  
 📍 Ho Chi Minh City, Vietnam  
-📧 \[marchi.frncsc@gmail.com]  
+📧 [marchi.frncsc@gmail.com]  
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/francesco-march%C3%AC-115657205/)
