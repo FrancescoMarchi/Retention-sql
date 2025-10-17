@@ -1,6 +1,4 @@
-!\[Dashboard Cover](docs/visuals/Risk Drivers \& Interventions.png)
-
-
+!\[Dashboard Cover](docs/visuals/walkthrough.gif)
 
 \# 📊 Customer Retention SQL Project  
 
