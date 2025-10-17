@@ -42,17 +42,17 @@ Retention-sql/
 
 ---
 
-## ⚙️ Workflow Overview  
+## ⚙️ Workflow Overview
 
-| Stage | Tool | Description |
+**1️⃣ Data Modeling — PostgreSQL**  
+Created analytical SQL views (`v_customers_features`, `v_churn_summary`, etc.) to aggregate, clean, and structure the dataset for analysis.
 
-|--------|------|-------------|
+**2️⃣ Exploration — Metabase**  
+Performed interactive exploration with SQL-based visualizations and global filters (`gender`, `partner`, `senior_citizen`).  
+Used these visual dashboards to validate churn hypotheses before final modeling.
 
-| 🧩 Data Modeling | **PostgreSQL** | Created analytical SQL views (`v_customers_features`, `v_churn_summary`, etc.) to aggregate and clean data |
-
-| 🔍 Exploration | **Metabase** | Interactive exploration with SQL-based charts and global filters (gender, partner, senior citizen) |
-
-| 📈 Visualization | **Power BI** | Final executive dashboard with KPIs, slicers, combo charts, and star-schema modeling |
+**3️⃣ Visualization — Power BI**  
+Built an executive-level dashboard featuring KPIs, slicers, combo charts, and a star-schema data model to present actionable retention insights.
 
 ---
 
