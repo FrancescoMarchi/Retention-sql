@@ -8,7 +8,7 @@
 
 ## 🎯 Objective  
 
-Analyze customer churn and retention drivers for a telecommunications company using a full modern analytics stack — **PostgreSQL**, **Metabase**, and **Power BI** — moving from raw data to executive insights.
+Analyze customer churn and retention drivers for a telecommunications company using a full modern analytics stack: **PostgreSQL**, **Metabase**, and **Power BI**; moving from raw data to executive insights.
 
 ---
 
