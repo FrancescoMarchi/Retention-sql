@@ -82,9 +82,9 @@ even if their standalone impact is moderate.
 
 ![Customer Retention Overview](visuals/Customer_Retention_Overview.png)
 
-- KPIs: Total Customers, Churners, Churn Rate %, Retained  
+- <u>KPIs</u>: Total Customers, Churners, Churn Rate %, Retained  
 
-- Combo chart: Churn % vs Customer volume by tenure bucket  
+- <u>Combo chart</u>: Churn % vs Customer volume by tenure bucket  
 
 &nbsp; → *Insight:* Early churn is the main challenge  
 
@@ -92,9 +92,9 @@ even if their standalone impact is moderate.
 
 ![Customer Risk Overview](visuals/Customer_Risk_Overview.png)
 
-- Donut chart: Risk bucket distribution  
+- <u>Donut chart</u>: Risk bucket distribution  
 
-- Combo chart: Churn % vs Risk level  
+- <u>Combo chart</u>: Churn % vs Risk level  
 
 &nbsp; → *Insight:* High-risk customers churn ≈ 71 %, 8× higher than low risk  
 
@@ -102,9 +102,9 @@ even if their standalone impact is moderate.
 
 ![Risk Drivers & Interventions](visuals/Risk_Drivers_&_Interventions.png)
 
-- Slicers: **Senior Citizen**, **Partner**, **Gender**  
+- <u>Slicers</u>: **Senior Citizen**, **Partner**, **Gender**  
 
-- Charts:  
+- <u>Charts</u>:  
 
 &nbsp; - Tech Support vs Churn %  
 
