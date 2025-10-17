@@ -80,7 +80,7 @@ even if their standalone impact is moderate.
 
 ### 1️⃣ Customer Retention Overview  
 
-![Customer Retention Overview](visuals/Customer%20Retention%20Overview.png)
+![Customer Retention Overview](visuals/Customer_Retention_Overview.png)
 
 - KPIs: Total Customers, Churners, Churn Rate %, Retained  
 
@@ -90,7 +90,7 @@ even if their standalone impact is moderate.
 
 ### 2️⃣ Customer Risk Overview  
 
-![Customer Risk Overview](visuals/Customer%20Risk%20Overview.png)
+![Customer Risk Overview](visuals/Customer_Risk_Overview.png)
 
 - Donut chart: Risk bucket distribution  
 
@@ -100,7 +100,7 @@ even if their standalone impact is moderate.
 
 ### 3️⃣ Risk Drivers & Interventions  
 
-![Customer Risk Overview](visuals/Risk%20Drivers%20&%20Interventions.png)
+![Customer Risk Overview](visuals/Risk_Drivers_&_Interventions.png)
 
 - Slicers: **Senior Citizen**, **Partner**, **Gender**  
 
