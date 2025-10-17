@@ -123,24 +123,28 @@ Below are the main DAX measures used to calculate churn and retention KPIs:
 ### 🧍‍♂️Total Customers  
 ```DAX
 Total Customers = COUNTROWS(customers_features)
+```
 
 **Description:** Total number of active customers in the dataset.
 
 ###💔 Churners
 ```DAX
 Churners = CALCULATE([Total Customers], customers_features[churn_flag] = TRUE())
+```
 
 **Description:** Customers who have churned.
 
 ###📉Churn Rate %
 ```DAX
 Churn Rate % = DIVIDE([Churners], [Total Customers])
+```
 
 **Description:** Percentage of total customers who churned.
 
 ###🔁 Retained
 ```DAX
 Retained = [Total Customers] - [Churners]
+```
 
 **Description:** Customers still active (non-churned).
 
@@ -154,6 +158,7 @@ DIVIDE(
     ),
     [Total Customers]
 )
+```
 
 **Description**: Share of customers in the high-risk group.
 
