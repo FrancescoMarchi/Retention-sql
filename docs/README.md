@@ -224,7 +224,7 @@ During the exploration stage, Metabase was used to visualize key churn patterns 
 - **🛠 Tech Support:** Customers without support churn at double the rate.  
 - **🌐 Internet Service:** Fiber users churned more frequently than DSL.
 
-![Metabase Dashboard](docs/visuals/metabase_overview.png)
+![Metabase Dashboard](visuals/metabase_overview.png)
 
 > This exploration phase validated the core churn drivers and informed the structure of the Power BI dashboard.
 
