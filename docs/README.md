@@ -214,6 +214,22 @@ DimSenior      → customers_features ← DimPartner
 
 ---
 
+## 🧠 Exploratory Analysis (Metabase)
+
+During the exploration stage, Metabase was used to visualize key churn patterns directly from SQL views (`v_customers_features`, `v_churn_summary`), before moving into Power BI modeling.
+
+**Key Insights from Metabase:**
+- **🕐 Tenure vs Churn Rate:** Over half of churn occurs within the first 6 months.  
+- **📄 Contract Type:** Month-to-month contracts show ~4× higher churn than annual ones.  
+- **🛠 Tech Support:** Customers without support churn at double the rate.  
+- **🌐 Internet Service:** Fiber users churned more frequently than DSL.
+
+![Metabase Dashboard](docs/visuals/metabase_overview.png)
+
+> This exploration phase validated the core churn drivers and informed the structure of the Power BI dashboard.
+
+---
+
 ## 🧰 Tools & Technologies
 
 **Database:** PostgreSQL  
