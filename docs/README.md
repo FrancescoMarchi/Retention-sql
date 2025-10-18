@@ -1,6 +1,8 @@
 ![Dashboard Cover](visuals/walkthrough.gif)
 
-# 📊 Customer Retention SQL Project  
+# 📊 Customer Retention SQL Project
+> 📈 Why most customers churn early — and how contract and support changes could prevent it.
+ 
 
 **Full Analytics Workflow: SQL → Metabase → Power BI**
 
@@ -268,6 +270,8 @@ This project demonstrates a complete **data-to-insight pipeline**:
 > SQL data modeling → Metabase exploration → Power BI storytelling  
 
 It integrates technical execution with strategic interpretation — turning raw churn data into **actionable retention recommendations**.
+
+> Built to show how SQL and BI can uncover actionable retention strategies, not just dashboards.
 
 ---
 
