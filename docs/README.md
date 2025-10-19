@@ -78,42 +78,23 @@ even if their standalone impact is moderate.
 
 ---
 
-## 📈 Power BI Dashboard Overview  
+## 📊 Power BI Dashboards
 
-### 1️⃣ Customer Retention Overview  
+### 1️⃣ When Customers Leave (By Tenure Group)
+![When Customers Leave](visuals/Customer_Retention_Overview.png)
+> **Insight:** Most churn occurs within the first year of tenure — retention should prioritize early-stage customers.
 
-![Customer Retention Overview](visuals/Customer_Retention_Overview.png)
+---
 
-- <ins>KPIs</ins>: Total Customers, Churners, Churn Rate %, Retained  
+### 2️⃣ Who’s More Likely to Leave (By Customer Segment)
+![Who’s More Likely to Leave](visuals/Customer_Risk_Overview.png)
+> **Insight:** High-risk customers represent 8% of the base but churn at over 70%, especially those on short-term contracts or without tech support.
 
-- <ins>Combo chart</ins>: Churn % vs Customer volume by tenure bucket  
+---
 
-&nbsp; → *Insight:* Early churn is the main challenge  
-
-### 2️⃣ Customer Risk Overview  
-
-![Customer Risk Overview](visuals/Customer_Risk_Overview.png)
-
-- <ins>Donut chart</ins>: Risk bucket distribution  
-
-- <ins>Combo chart</ins>: Churn % vs Risk level  
-
-&nbsp; → *Insight:* High-risk customers churn ≈ 71 %, 8× higher than low risk  
-
-### 3️⃣ Risk Drivers & Interventions  
-
-![Risk Drivers & Interventions](visuals/Risk_Drivers_&_Interventions.png)
-
-- <ins>Slicers</ins>: **Senior Citizen**, **Partner**, **Gender**  
-
-- <ins>Charts</ins>:  
-
-&nbsp; - Tech Support vs Churn %  
-
-&nbsp; - Contract Type vs Churn %  
-
-&nbsp; → *Insight:* Month-to-month + no tech support = highest churn likelihood  
-
+### 3️⃣ How to Retain Them (Intervention Opportunities)
+![How to Retain Them](visuals/Risk_Drivers_&_Interventions.png)
+> **Insight:** Retention uplift is most achievable by extending contracts and offering proactive tech support to high-risk customers.
 ---
 
 ## 🧮 Power BI Measures
