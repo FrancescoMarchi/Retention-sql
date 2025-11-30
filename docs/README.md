@@ -1,270 +1,273 @@
 ![Dashboard Cover](visuals/walkthrough.gif)
 
-# 📊 Customer Retention SQL Project
-> 📈 Why most customers churn early — and how contract and support changes could prevent it.
- 
+# 📊 Customer Retention SQL Project  
+> **Why most customers churn early — and how contract and support interventions reduce churn dramatically.**
 
-**Full Analytics Workflow: SQL → Metabase → Power BI**
-
----
-
-## 🎯 Objective  
-
-Analyze customer churn and retention drivers for a telecommunications company using a full modern analytics stack: **PostgreSQL**, **Metabase**, and **Power BI**; moving from raw data to executive insights.
+Full analytics pipeline: **PostgreSQL → Metabase → Power BI**
 
 ---
 
-## 📁 Project Structure  
+# 🧭 Executive Summary  
 
-```
+This project uncovers the key drivers behind customer churn in a telecommunications company using a full modern BI workflow.
 
-Retention-sql/
+Through **SQL modeling**, **Metabase exploration**, and an **insight-driven Power BI dashboard**, the analysis reveals:
 
-│
+- Early-tenure churn as the **main retention challenge**  
+- Contract type and tech support as the **strongest churn drivers**  
+- High-risk customers (8%) as the **core priority** for targeted retention  
+- Medium-risk customers as the **largest at-risk segment**, offering maximum ROI  
 
-├── bi/                → Power BI reports, dashboards, and DAX measures  
-
-├── data/              → Cleaned CSVs or intermediate datasets  
-
-├── docs/              → Documentation and visual materials  
-
-│   ├── visuals/       → Screenshots and demo captures  
-
-│   └── README.md      → (This file)  
-
-├── exports/           → SQL exports, CSV outputs from queries  
-
-├── sql/               → SQL scripts and view definitions  
-
-│
-
-└── README.md          → Root-level overview (optional summary)
-
-```
+The result is an actionable churn-reduction strategy based on real data.
 
 ---
 
-## ⚙️ Workflow Overview
+# 🧩 Business Questions
 
-**1️⃣ Data Modeling — PostgreSQL**  
-Created analytical SQL views (`v_customers_features`, `v_churn_summary`, etc.) to aggregate, clean, and structure the dataset for analysis.
+This analysis answers three core business questions:
 
-**2️⃣ Exploration — Metabase**  
-Performed interactive exploration with SQL-based visualizations and global filters (`gender`, `partner`, `senior_citizen`).  
-Used these visual dashboards to validate churn hypotheses before final modeling.
+1. **When do customers typically churn?**  
+   (Tenure analysis — identifying the critical churn window)
 
-**3️⃣ Visualization — Power BI**  
-Built an executive-level dashboard featuring KPIs, slicers, combo charts, and a star-schema data model to present actionable retention insights.
+2. **Which customers are most at risk of leaving?**  
+   (Segmentation — risk scoring, demographics, contract type, tech support)
 
----
+3. **How can we reduce churn effectively?**  
+   (Intervention strategy — contract renewal, tech support, targeting high- and medium-risk groups)
 
-## 🧠 Key Findings  
-
-**1️⃣ Early-tenure churn dominates:**  
-
-Over **50 % of churn occurs within the first six months** — customer onboarding is the critical retention window.  
-
-**2️⃣ Contract type is the main driver:**  
-
-Month-to-month customers churn **4× more** than two-year contract customers.  
-
-**3️⃣ Tech support matters:**  
-
-Lack of tech support doubles churn risk (**45 %** vs **18 %**).  
-
-**4️⃣ Senior and partner filters enable better segmentation,**  
-
-even if their standalone impact is moderate.
+These questions structure the entire dashboard and guide the retention strategy.
 
 ---
 
-## 📊 Power BI Dashboards
+# 🎯 Project Objective  
 
-### 1️⃣ When Customers Leave (By Tenure Group)
+Turn raw telecom data into **clear, executive retention insights** by:
+
+- Structuring the data with analytical SQL views  
+- Exploring churn patterns and validating hypotheses in Metabase  
+- Building a clean, strategic, multi-page Power BI dashboard  
+- Applying proper data modeling (star schema) and robust DAX measures  
+
+---
+
+# 📁 Repository Structure  
+
+    Retention-sql/
+    │
+    ├── bi/                → Power BI files & DAX measures
+    ├── data/              → Cleaned datasets / exported SQL views
+    ├── docs/              → Documentation & visuals
+    │   ├── visuals/       → Screenshots & GIF walkthrough
+    │   └── README.md      → (This file)
+    ├── exports/           → Query outputs
+    ├── sql/               → SQL scripts & view definitions
+    └── README.md          → Optional root-level summary
+
+---
+
+# ⚙️ Workflow Overview  
+
+## 1️⃣ SQL Data Modeling (PostgreSQL)  
+
+Created analytical views including:
+
+- `v_customers_features`  
+- `v_churn_summary`  
+- `v_tenure_groups`  
+- `v_risk_scores`  
+
+These transformed raw data into a structured, analysis-ready layer.
+
+---
+
+## 2️⃣ Exploratory Analysis (Metabase)  
+
+Used SQL-native cards and interactive visualizations to analyze churn by:
+
+- Contract type  
+- Tech support  
+- Tenure  
+- Internet service type  
+
+With dynamic global filters (gender, partner, senior citizen).
+
+This step validated key drivers before dashboard creation.
+
+---
+
+## 3️⃣ Executive Dashboard (Power BI)  
+
+Designed a 3-page dashboard following best practices:
+
+- Insight-driven titles and subtitles  
+- Clean KPI bar  
+- Dynamic slicers with “All Selected” as the default  
+- Risk segmentation and churn rate visuals  
+- Intervention recommendations  
+- Consistent color palette & visual hierarchy  
+
+Built on a **star schema** with clean dimension tables.
+
+---
+
+# 🧠 Key Findings  
+
+## 1️⃣ Early-tenure churn dominates  
+
+Over **50% of churn occurs in the first six months**, making onboarding the highest-ROI retention opportunity.
+
+## 2️⃣ Contract type is the strongest predictor  
+
+Month-to-month customers churn **around 8× more** than two-year contract holders.
+
+## 3️⃣ Tech support cuts churn risk in half  
+
+- No tech support → around **45%** high-risk  
+- With tech support → around **18%** high-risk  
+
+## 4️⃣ High-risk = only 8% of customers but 71% churn rate  
+
+Targeted retention saves more customers with fewer resources.  
+Medium-risk customers form the **largest at-risk segment**, making them the most impactful group to focus on.
+
+---
+
+# 📊 Power BI Dashboards  
+
+## 1️⃣ When Customers Leave (Tenure Analysis)  
+
 ![When Customers Leave](visuals/Customer_Retention_Overview.png)
-> **Insight:** Most churn occurs within the first year of tenure — retention should prioritize early-stage customers.
+
+> **Insight:** Most churn happens in the first 12 months — early engagement and onboarding matter most.
 
 ---
 
-### 2️⃣ Who’s More Likely to Leave (By Customer Segment)
+## 2️⃣ Who’s More Likely to Leave (Segmentation & Risk)  
+
 ![Who’s More Likely to Leave](visuals/Customer_Risk_Overview.png)
-> **Insight:** High-risk customers represent 8% of the base but churn at over 70%, especially those on short-term contracts or without tech support.
+
+> **Insight:** Medium-risk customers are the largest at-risk group, while high-risk customers churn at over 70%.
 
 ---
 
-### 3️⃣ How to Retain Them (Intervention Opportunities)
+## 3️⃣ How to Retain Them (Intervention Priorities)  
+
 ![How to Retain Them](visuals/Risk_Drivers_&_Interventions.png)
-> **Insight:** Retention uplift is most achievable by extending contracts and offering proactive tech support to high-risk customers.
----
 
-## 🧮 Power BI Measures
-
-Below are the main DAX measures used to calculate churn and retention KPIs:
+> **Insight:** Extending contracts and providing tech support significantly reduce churn in high-risk groups.
 
 ---
 
-### 🧍‍♂️Total Customers  
-```DAX
-Total Customers = COUNTROWS(customers_features)
-```
+## 🔍 Segment-Level View (Dynamic Slicer Example)  
 
-**Description:** Total number of active customers in the dataset.
+Example of Page 3 recalculated for a specific customer segment  
+(**Senior = Yes, Partner = Yes, Gender = Male**) to demonstrate correct dynamic filtering.
 
-### 💔 Churners
-```DAX
-Churners = CALCULATE([Total Customers], customers_features[churn_flag] = TRUE())
-```
+![Segment View – Retention Drivers](visuals/Retention_Segment_View.png)
 
-**Description:** Customers who have churned.
-
-### 📉 Churn Rate %
-```DAX
-Churn Rate % = DIVIDE([Churners], [Total Customers])
-```
-
-**Description:** Percentage of total customers who churned.
-
-### 🔁 Retained
-```DAX
-Retained = [Total Customers] - [Churners]
-```
-
-**Description:** Customers still active (non-churned).
-
-### ⚠️ High-Risk %
-```DAX
-High-Risk % =
-DIVIDE(
-    CALCULATE(
-        [Total Customers],
-        customers_features[risk_bucket] = "High (5-6)"
-    ),
-    [Total Customers]
-)
-```
-
-**Description:** Share of customers in the high-risk group.
+> Even when filtering to this segment, the patterns remain consistent: lack of tech support and month-to-month contracts remain the strongest churn drivers — confirming the robustness of the model.
 
 ---
 
-## 🧱 Data Model (Star Schema)  
+# 🧮 Key DAX Measures  
 
-```
+(Indentation is used here so everything stays inside one markdown container.)
 
-DimSenior      → customers_features ← DimPartner
+**Total Customers**
 
-&nbsp;                                ↑
+    Total Customers =
+        COUNTROWS ( customers_features )
 
-&nbsp;                             (Fact Table)
+**Churners**
 
-```
+    Churners =
+        CALCULATE (
+            [Total Customers],
+            customers_features[churn_flag] = TRUE ()
+        )
 
-- **DimSenior / DimPartner:** Created with `DATATABLE()` for clean Yes/No filtering  
+**Churn Rate %**
 
-- **customers_features:** Fact table with churn flag, service, and demographic data  
+    Churn Rate % =
+        DIVIDE ( [Churners], [Total Customers] )
 
-- Relationships: **Many-to-One**, **Single Direction**, no ambiguity  
+**Retained Customers**
 
----
+    Retained =
+        [Total Customers] - [Churners]
 
-## 💡 Technical Notes 
+**High-Risk Customers %**
 
-- Converted 0/1 columns to **Boolean** in Power Query (`TRUE/FALSE`)  
+    High-Risk % =
+        DIVIDE (
+            CALCULATE (
+                [Total Customers],
+                customers_features[risk_bucket] = "High (5-6)"
+            ),
+            [Total Customers]
+        )
 
-- Built dimension tables for `DimSenior` and `DimPartner`  
-
-- Fixed relationship ambiguity by enforcing **single active filter paths**  
-
-- Validated all visuals across Metabase and Power BI for consistency  
-
----
-
-## 🧩 Metabase Highlights  
-
-- Connected to PostgreSQL schema `retention`  
-
-- Built **exploratory SQL questions**:
-
-&nbsp; - `Churn by Contract Type`
-
-&nbsp; - `Churn by Tech Support`
-
-&nbsp; - `Churn Rate by Tenure Bucket`  
-
-- Implemented **global filters** (gender, senior citizen, partner) using **Field Filter** type  
-
-- Linked variables across all visual cards  
+(If your actual table/column names differ slightly, they can be adjusted to match the model.)
 
 ---
 
-## 🧠 Exploratory Analysis (Metabase)
+# 🧱 Data Model (Star Schema)  
 
-During the exploration stage, Metabase was used to visualize key churn patterns directly from SQL views (`v_customers_features`, `v_churn_summary`), before moving into Power BI modeling.
+    DimSenior      → customers_features ← DimPartner
 
-**Key Insights from Metabase:**
-- **🕐 Tenure vs Churn Rate:** Over half of churn occurs within the first 6 months.  
-- **📄 Contract Type:** Month-to-month contracts show ~4× higher churn than annual ones.  
-- **🛠 Tech Support:** Customers without support churn at double the rate.  
-- **🌐 Internet Service:** Fiber users churned more frequently than DSL.
+- `customers_features` used as the main fact table  
+- Dimensions built with `DATATABLE()` for clean Yes/No filtering  
+- Boolean cleanup in Power Query (e.g., 0/1 → TRUE/FALSE)  
+- Single-direction relationships to avoid ambiguity  
+
+---
+
+# 🧩 Metabase Highlights  
+
+SQL-based questions created to explore:
+
+- Churn by Contract Type  
+- Churn by Tech Support  
+- Churn by Tenure Group  
+- Churn by Internet Service  
 
 ![Metabase Dashboard](visuals/metabase_overview.png)
 
-> This exploration phase validated the core churn drivers and informed the structure of the Power BI dashboard.
+> This exploratory phase aligned closely with the final Power BI insights and guided which drivers to surface on the dashboard.
 
 ---
 
-## 🧰 Tools & Technologies
+# 🧰 Tools & Technologies  
 
-**Database:** PostgreSQL  
-**BI Tools:** Power BI, Metabase  
-**Languages:** SQL, DAX  
-**Modeling:** Star Schema (Dim–Fact)  
-**Data Types:** Boolean, Categorical, Numeric
-
----
-
-## 📸 Docs & Visuals
-
-Located in: `/docs/visuals/`
-
-- **🧭 Customer_Retention_Overview.png** — Power BI *Customer Retention Overview*
-- **📊 Customer_Risk_Overview.png** — Risk segmentation dashboard
-- **⚙️ Risk_Drivers_&_Interventions.png** — Risk driver visuals
-- **🎞️ walkthrough.gif** — short dashboard walkthrough animation
+- **Database:** PostgreSQL  
+- **Exploration:** Metabase  
+- **BI:** Power BI  
+- **Languages:** SQL, DAX  
+- **Modeling:** Star Schema  
+- **Data Types:** Boolean, Categorical, Numeric  
 
 ---
 
-## 🚀 Recommendations  
+# 🚀 Recommendations  
 
-1. **Strengthen early engagement** (first 6 months).  
-
-2. **Encourage long-term contracts** for better retention.  
-
-3. **Prioritize tech support** for high-risk and new customers.  
-
----
-
-## 💬 Summary  
-
-This project demonstrates a complete **data-to-insight pipeline**:  
-
-> SQL data modeling → Metabase exploration → Power BI storytelling  
-
-It integrates technical execution with strategic interpretation — turning raw churn data into **actionable retention recommendations**.
-
-> Built to show how SQL and BI can uncover actionable retention strategies, not just dashboards.
+1. **Strengthen onboarding during the first 6 months** with welcome journeys, education, and early check-ins.  
+2. **Promote long-term contract renewals** (e.g., discounts for moving from month-to-month to one- or two-year contracts).  
+3. **Provide proactive tech support** for high- and medium-risk customers, especially those with recent issues.  
+4. **Prioritize the medium-risk segment** (largest at-risk group) for campaigns, since it combines meaningful volume with elevated churn.  
 
 ---
 
-💼 **Stack:** PostgreSQL | Metabase | Power BI | DAX | SQL  
+# 💬 Summary  
 
-🕓 **Completed:** October 2025  
+This project demonstrates a complete analytics pipeline:
 
-📂 **Repository:** `Retention-sql`
+> **SQL modeling → Metabase exploration → Power BI storytelling**
 
-👤Author
+It highlights not just technical execution, but the ability to turn churn data into **strategic retention insights** that decision-makers can act on.
 
-**Francesco Marchì**  
+---
+
+**Author:** Francesco Marchì  
 📍 Ho Chi Minh City, Vietnam  
-📧 [marchi.frncsc@gmail.com]  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/francesco-march%C3%AC-115657205/)
+📧 marchi.frncsc@gmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/francesco-march%C3%AC-115657205/
