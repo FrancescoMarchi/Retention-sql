@@ -1,4 +1,4 @@
-![Dashboard Cover](visuals/walkthrough.gif)
+![Explanatory video](insert Loom here)
 
 # 📊 Customer Retention SQL Project  
 > **Why most customers churn early — and how contract and support interventions reduce churn dramatically.**
