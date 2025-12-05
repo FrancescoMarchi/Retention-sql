@@ -1,5 +1,3 @@
-![Explanatory video](insert Loom here)
-
 # 📊 Customer Retention SQL Project  
 > **Why most customers churn early — and how contract and support interventions reduce churn dramatically.**
 
@@ -64,6 +62,8 @@ Turn raw telecom data into **clear, executive retention insights** by:
     └── README.md          → Optional root-level summary
 
 ---
+
+▶️ Video presentation (insert Loom here)
 
 # ⚙️ Workflow Overview  
 
