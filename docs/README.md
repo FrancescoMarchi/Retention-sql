@@ -138,7 +138,10 @@ Medium-risk customers form the **largest at-risk segment**, making them the most
 
 ![When Customers Leave](visuals/Customer_Retention_Overview.png)
 
-> **Insight:** Most churn happens in the first 12 months — early engagement and onboarding matter most.
+> **Insight:** Early-tenure cohorts not only have the highest churn rate, but also represent a large share of total customer volume — meaning they drive a disproportionate share of overall churn.
+
+A benchmark reference line (26.5%) highlights which tenure groups perform above expected churn levels, especially the **0–6 month** and **7–12 month** cohorts.  
+These groups define the **critical onboarding and early engagement window** where retention efforts have the highest ROI.
 
 ---
 
@@ -150,22 +153,36 @@ Medium-risk customers form the **largest at-risk segment**, making them the most
 
 ---
 
-## 3️⃣ How to Retain Them (Intervention Priorities)  
+## 3️⃣ How to Retain Them (Intervention Priorities)
 
 ![How to Retain Them](visuals/Risk_Drivers_&_Interventions.png)
 
-> **Insight:** Extending contracts and providing tech support significantly reduce churn in high-risk groups.
+> **Insight:** This page isolates the two strongest operational drivers of churn risk — contract length and tech support — and shows how they shape high-risk customer behavior.
+
+- Customers **without tech support** show the highest concentration of high-risk individuals (≈45%).  
+  → Providing proactive support can reduce churn risk **by more than half**, making it one of the most effective levers.
+
+- **Month-to-month contracts** churn at ≈43%, over **8× higher** than two-year contract customers.  
+  → This group represents the **highest-impact target** for renewal and upgrade campaigns.
+
+Annotation callouts highlight *why* these groups matter, shifting the page from descriptive analytics to **clear intervention strategy**.
 
 ---
 
-## 🔍 Segment-Level View (Dynamic Slicer Example)  
+## 🔍 Segment-Level View (Dynamic Filtering)
 
-Example of Page 3 recalculated for a specific customer segment  
-(**Senior = Yes, Partner = Yes, Gender = Male**) to demonstrate correct dynamic filtering.
+The model recalculates all risk and churn metrics under any slicer combination.  
+Below is Page 3 filtered for a specific demographic segment:
 
-![Segment View – Retention Drivers](visuals/Retention_Segment_View.png)
+**Senior = Yes, Partner = Yes, Gender = Female**
 
-> Even when filtering to this segment, the patterns remain consistent: lack of tech support and month-to-month contracts remain the strongest churn drivers — confirming the robustness of the model.
+![Segment View – Retention Drivers](visuals/Risk_Drivers_&_Interventions(segment).png)
+
+Even with filtering applied, the same retention drivers remain dominant:  
+- Lack of tech support  
+- Month-to-month contracts  
+
+This confirms that the churn model is stable and the insights are **robust across segments**.
 
 ---
 
