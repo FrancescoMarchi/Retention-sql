@@ -3,6 +3,8 @@
 
 Full analytics pipeline: **PostgreSQL → Metabase → Power BI**
 
+▶️ Video presentation: https://www.loom.com/share/34b756b530ad43bf89144c055cdfdea7
+
 ---
 
 # 🧭 Executive Summary  
@@ -62,8 +64,6 @@ Turn raw telecom data into **clear, executive retention insights** by:
     └── README.md          → Optional root-level summary
 
 ---
-
-▶️ Video presentation (insert Loom here)
 
 # ⚙️ Workflow Overview  
 
